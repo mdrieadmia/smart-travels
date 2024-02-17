@@ -25,6 +25,10 @@
         .font-raleway{
             font-family: "Raleway", sans-serif;
         }
+        /* .container{
+            max-width: 1150px;
+            margin: 0 auto;
+        } */
     </style>
     <!---- Custom Tailwind Variables ---->
     <script>
@@ -37,6 +41,9 @@
                 'dark2' : '#030712CC',
                 'dark3' : '#03071299',
                 'dark4' : '#03071280'
+              },
+              backgroundImage: {
+                'hero': "url('./images/banner.png')",
               }
             }
           }
@@ -45,13 +52,53 @@
 </head>
 <body>
     <header>
-
+        <nav class="container mx-auto px-4 lg:px-12">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a class="font-semibold font-raleway hover:text-brand-color">Home</a></li>
+                      <li><a class="font-semibold font-raleway hover:text-brand-color">About</a></li>
+                      <li><a class="font-semibold font-raleway hover:text-brand-color">Services</a></li>
+                      <li><a class="font-semibold font-raleway hover:text-brand-color">Route</a></li>
+                      <li><a class="font-semibold font-raleway hover:text-brand-color">Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="text-2xl font-extrabold font-raleway cursor-pointer">Smart <span class="text-brand-color">travels</span></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a class="font-semibold font-raleway hover:text-brand-color">Home</a></li>
+                    <li><a class="font-semibold font-raleway hover:text-brand-color">About</a></li>
+                    <li><a class="font-semibold font-raleway hover:text-brand-color">Services</a></li>
+                    <li><a class="font-semibold font-raleway hover:text-brand-color">Route</a></li>
+                    <li><a class="font-semibold font-raleway hover:text-brand-color">Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn bg-[#1DD1001A] text-brand-color font-bold text-xl border-2 border-brand-color hover:bg-transparent hover:border-brand-color"> Bus <img src="./images/bus-icon.png" alt="bus icon"></a>
+                </div>
+            </div>
+        </nav>
+        <section id="banner">
+            <div class="container mx-auto px-4">
+                <div class="w-full h-[550px] bg-hero bg-no-repeat bg-center text-center space-y-5 rounded-2xl p-4">
+                    <h1 class="font-raleway font-extrabold text-3xl md:text-4xl lg:text-5xl text-white pt-20">Discovering The Best Journy With</h1>
+                    <h2 class="font-raleway font-extrabold text-3xl md:text-4xl lg:text-5xl text-brand-color">Smart Travels</h2>
+                    <p class="font-inter text-[14px] md:text-[16px] lg:text-lg text-white max-w-[700px] mx-auto">Your ultimate online destination for discovering new places, planning seamless trips, uncovering valuable travel tips, and connecting with a vibrant community of Bangladesh</p>
+                    <button class="btn bg-brand-color border-none text-lg text-white">Buy Tickets</button>
+                </div>
+            </div>
+        </section>
     </header>
     <main>
 
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
