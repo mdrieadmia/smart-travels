@@ -97,7 +97,7 @@
                     <h1 class="font-raleway font-extrabold text-3xl md:text-4xl lg:text-5xl text-white pt-20">Discovering The Best Journy With</h1>
                     <h2 class="font-raleway font-extrabold text-3xl md:text-4xl lg:text-5xl text-brand-color">Smart Travels</h2>
                     <p class="font-inter text-[14px] md:text-[16px] lg:text-lg text-white max-w-[700px] mx-auto">Your ultimate online destination for discovering new places, planning seamless trips, uncovering valuable travel tips, and connecting with a vibrant community of Bangladesh</p>
-                    <button class="btn bg-brand-color border-none text-lg text-white">Buy Tickets</button>
+                    <a href="#BuyTicket" class="inline-block"><button class="btn bg-brand-color border-none text-lg text-white">Buy Tickets</button></a>
                 </div>
                 <div class="w-full mx-auto flex justify-center flex-wrap gap-5 lg:-mt-[70px]">
                     <div class="w-[320px] p-8 bg-white rounded-xl border-brand-color border-b-4 flex justify-center items-center gap-6">
@@ -192,7 +192,7 @@
                                     </div>
                                 </div>
                                 <div class="w-44 h-12 bg-[#1DD10026] rounded-md flex justify-center items-center mt-5 md:mt-0">
-                                    <p class="font-inter text-base font-bold text-brand-color"> <i class="fa-solid fa-couch"></i> <span> 40 </span> seat left</p>
+                                    <p class="font-inter text-base font-bold text-brand-color"> <i class="fa-solid fa-couch"></i> <span id="avaiable_seat"> 40 </span> seat left</p>
                                 </div>
                             </div>
                             <div class="p-5 bg-[#F7F8F8] mt-3 rounded-2xl">
@@ -222,14 +222,14 @@
                         <div class="p-8 w-full lg:w-[20%] flex justify-center lg:justify-start items-center">
                             <div class="flex flex-col gap-4 justify-center items-center">
                                 <img src="./images/fare.png" alt="fare icon">
-                                <h3 class="font-inter font-bold text-3xl text-dark1 text-center"><span>550</span> Taka</h3>
+                                <h3 class="font-inter font-bold text-3xl text-dark1 text-center"><span id="single_ticket_price">550</span> Taka</h3>
                                 <p class="font-inter font-medium text-2xl text-dark3">Per seat </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="custom_container mx-auto mb-20 hidden">
+            <div class="custom_container mx-auto mb-20">
                 <div class="w-full p-10 bg-white rounded-2xl mt-6 flex justify-between gap-2 flex-col xl:flex-row">
                     <div class="lg:w-[55%]">
                         <div class="space-y-5">
@@ -254,12 +254,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">A4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -269,12 +269,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">B4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -284,12 +284,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">C4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -299,12 +299,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">D4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -314,12 +314,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">E4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -329,12 +329,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">F4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -344,12 +344,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">G4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -359,12 +359,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">H4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -374,12 +374,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">I4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -389,12 +389,12 @@
                                     </div>
                                     <div class="flex gap-20">
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J1</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J2</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J1</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J2</button>
                                         </div>
                                         <div class="flex gap-5">
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J3</div>
-                                            <div class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J4</div>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J3</button>
+                                            <button class="seat cursor-pointer w-[90px] h-[60px] bg-[#F7F8F8] rounded-lg flex justify-center items-center text-lg font-inter font-semibold text-dark3">J4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -410,30 +410,24 @@
                         </div>
                         <div class="p-8 rounded-xl bg-[#F7F8F8] mt-5 w-full">
                             <div class="flex justify-between gap-24">
-                                <p class="font-inter font-bold text-xl">seat <sup><span class="px-[10px] py-[5px] rounded-lg bg-brand-color text-white">0</span></sup></p>
+                                <p class="font-inter font-bold text-xl">seat <sup><span class="px-[10px] py-[5px] rounded-lg bg-brand-color text-white" id="totalSeat">0</span></sup></p>
                                 <p class="font-inter font-bold text-xl">Class</p>
                                 <p class="font-inter font-bold text-xl">Price</p>
                             </div>
                             <hr class="border border-dashed border-gray-300 mt-3">
-                            <div id="TicketContainer" class="mt-3">
-                                <ul>
-                                    <li>C2</li>
-                                    <li>Economy</li>
-                                    <li>550</li>
-                                </ul>
-                            </div>
+                            <div id="TicketContainer" class="mt-3"></div>
                             <hr class="border border-dashed border-gray-300 mt-3">
                             <div class="flex justify-between mt-4">
                                 <h3 class="font-inter font-bold text-xl">Total Price</h3>
-                                <h4 class="font-inter font-bold text-xl">BDT <span>0</span></h4>
+                                <h4 class="font-inter font-bold text-xl">BDT <span id="total_price">0</span></h4>
                             </div>
                             <div class="mt-4 bg-white rounded-xl p-2 flex justify-between">
-                                <input class="p-3 placeholder:text-lg placeholder:font-inter focus-visible:outline-none text-xl text-dark2" type="text" placeholder="Have any couppon?">
-                                <button class="btn bg-brand-color border-none text-xl font-medium text-white rounded-xl px-5">Apply</button>
+                                <input class="p-3 placeholder:text-lg placeholder:font-inter focus-visible:outline-none text-xl text-dark2" type="text" placeholder="Have any couppon?" id="coupon_field">
+                                <button class="btn bg-brand-color border-none text-xl font-medium text-white rounded-xl px-5" id="apply_btn" disabled>Apply</button>
                             </div>
                             <div class="flex justify-between mt-4">
                                 <h3 class="font-inter font-bold text-xl">Grand Total</h3>
-                                <h4 class="font-inter font-bold text-xl">BDT <span>0</span></h4>
+                                <h4 class="font-inter font-bold text-xl">BDT <span id="grand_total">0</span></h4>
                             </div>
                             <div class="mt-10">
                                 <form action="">
@@ -455,7 +449,6 @@
                 </div>
             </div>
             <div class="custom_container mx-auto mb-20">
-
             </div>
         </section>
     </main>
@@ -482,5 +475,7 @@
             </div>
         </div>
     </footer>
+    <!-- JS file link -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
