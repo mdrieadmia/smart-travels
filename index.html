@@ -37,6 +37,22 @@
             font-size: 16px;
             font-weight: 600;
         }
+        #discount_container{
+            display: flex;
+            justify-content: space-between;
+        }
+        #discount_container h3{
+            font-family: "Inter", sans-serif;
+            font-size: 22px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        #discount_container h4{
+            font-family: "Inter", sans-serif;
+            font-size: 22px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
     </style>
     <!---- Custom Tailwind Variables ---->
     <script>
@@ -421,7 +437,10 @@
                                 <h3 class="font-inter font-bold text-xl">Total Price</h3>
                                 <h4 class="font-inter font-bold text-xl">BDT <span id="total_price">0</span></h4>
                             </div>
-                            <div class="mt-4 bg-white rounded-xl p-2 flex justify-between">
+                            <div id="discount_container">
+
+                            </div>
+                            <div id="discount_input_field" class="mt-4 bg-white rounded-xl p-2 flex justify-between">
                                 <input class="p-3 placeholder:text-lg placeholder:font-inter focus-visible:outline-none text-xl text-dark2" type="text" placeholder="Have any couppon?" id="coupon_field">
                                 <button class="btn bg-brand-color border-none text-xl font-medium text-white rounded-xl px-5" id="apply_btn" disabled>Apply</button>
                             </div>

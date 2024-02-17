@@ -14,7 +14,8 @@ for(const seat of allSeat){
         seat.classList.add('bg-brand-color');
         seat.classList.add('text-white');
         // Avaiable seat count
-        const avaiableSeat = document.getElementById('avaiable_seat');
+        const avaiableSeat = parseInt(document.getElementById('avaiable_seat').innerText);
+        document.getElementById('avaiable_seat').innerText = avaiableSeat - 1 ;
         // Add seat details in ticket container
         const ticketContainer = document.getElementById('TicketContainer');
         const singleTicketPriceStr = document.getElementById('single_ticket_price').innerText; 
@@ -31,20 +32,57 @@ for(const seat of allSeat){
         ul.appendChild(li3);
         ticketContainer.appendChild(ul);
         // Set total price value
-        totalPriceCount(singleTicketPrice);
-        // Coupon validation
-        const couponField = document.getElementById('coupon_field');
+        totalPriceCount(singleTicketPrice);  
+        // Coupon button enable
         const applyBtn = document.getElementById('apply_btn');
         if(totalSelectedSeat === 4){
             applyBtn.removeAttribute('disabled')
         }
-
+        // Grand total count
+        const totalPrice = parseInt(document.getElementById('total_price').innerText);
+        grandTotalPriceCount(totalPrice, 0);
     })
-
 }
+// Coupon code validation 
+document.getElementById('apply_btn').addEventListener('click', function(){
+    const totalPrice = parseInt(document.getElementById('total_price').innerText);
+    const discountContainer = document.getElementById('discount_container');
+    const h3 = document.createElement('h3');
+    const h4 = document.createElement('h4');
+    h3.innerText = "Discount"
+    const discountInputField = document.getElementById('discount_input_field');
+    const couponField = document.getElementById('coupon_field');
+    const couponCodeArr = couponField.value.split(' ');
+    const couponCode = couponCodeArr.join('').toUpperCase();
+    if(couponCode === 'NEW15'){
+        const discountPrice = totalPrice * (15 / 100);
+        h4.innerText = discountPrice;
+        discountContainer.appendChild(h3);
+        discountContainer.appendChild(h4);
+        discountInputField.remove();
+        grandTotalPriceCount(totalPrice, discountPrice);
+    }  
+    else if(couponCode === 'COUPLE20'){
+        const discountPrice = totalPrice * (20 / 100);
+        h4.innerText = discountPrice;
+        discountContainer.appendChild(h3);
+        discountContainer.appendChild(h4);
+        discountInputField.remove();
+        grandTotalPriceCount(totalPrice, discountPrice);
+    }
+    else(
+        alert("Invalid Coupon Code")
+    )
+})
 
 function totalPriceCount(value){
     let totalPrice = parseInt(document.getElementById('total_price').innerText);
     document.getElementById('total_price').innerText = totalPrice + value;
 }
+
+function grandTotalPriceCount(total, discount){
+    let totalPrice = parseInt(document.getElementById('grand_total').innerText);
+    document.getElementById('grand_total').innerText = total - discount;
+}
+
 
