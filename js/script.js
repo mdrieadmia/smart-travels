@@ -13,6 +13,7 @@ for(const seat of allSeat){
         // Add background color to selected seat
         seat.classList.add('bg-brand-color');
         seat.classList.add('text-white');
+        seat.classList.add('selected');
         // Avaiable seat count
         const avaiableSeat = parseInt(document.getElementById('avaiable_seat').innerText);
         document.getElementById('avaiable_seat').innerText = avaiableSeat - 1 ;
@@ -46,10 +47,22 @@ for(const seat of allSeat){
         if(totalSelectedSeat > 0 && phoneInput.length === 11){
         nextBtn.removeAttribute('disabled');
         }
-        
-        
-
+        // Clear form after confirm
+        document.getElementById('continue').addEventListener('click',function(){
+            ticketContainer.childNodes[0].remove();
+            document.getElementById('total_price').innerText = 0
+            document.getElementById('grand_total').innerText = 0
+            totalSeat.innerText = 0
+            const allSelectedSeat = document.querySelectorAll('.selected')
+            for(const selected of allSelectedSeat){
+                selected.classList.remove('bg-brand-color');
+                selected.classList.remove('text-white');
+            }
+            totalSelectedSeat = 0;
+            document.getElementById('avaiable_seat').innerText = 40;
+        })
     })
+    
 }
 // Coupon code validation 
 document.getElementById('apply_btn').addEventListener('click', function(){
@@ -93,7 +106,16 @@ if(totalSelectedSeat > 0 && event.target.value.length === 11){
    
 })
 
-
+// Show Modal
+document.getElementById('continue').addEventListener('click',function(){
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    name.value = '';
+    phone.value = '';
+    email.value = '';
+    nextBtn.setAttribute('disabled', true)
+})
 
 function totalPriceCount(value){
     let totalPrice = parseInt(document.getElementById('total_price').innerText);
