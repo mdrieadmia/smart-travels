@@ -44,7 +44,7 @@ for(const seat of allSeat){
         grandTotalPriceCount(totalPrice, 0);
         const phoneInput = document.getElementById('phone').value;
         const nextBtn = document.getElementById('next_btn');
-        if(totalSelectedSeat > 0 && phoneInput.length === 11){
+        if(totalSelectedSeat > 0 && phoneInput.length > 0){
         nextBtn.removeAttribute('disabled');
         }
         // Clear data after confirm purchase
@@ -97,7 +97,7 @@ document.getElementById('apply_btn').addEventListener('click', function(){
 // Input form validation
 const nextBtn = document.getElementById('next_btn');
 document.getElementById('phone').addEventListener('keyup', function(event){
-if(totalSelectedSeat > 0 && event.target.value.length === 11){
+if(totalSelectedSeat > 0 && event.target.value.length > 0){
     nextBtn.removeAttribute('disabled');
    }
 })
