@@ -14,6 +14,7 @@ for(const seat of allSeat){
         seat.classList.add('bg-brand-color');
         seat.classList.add('text-white');
         seat.classList.add('selected');
+        seat.setAttribute('disabled', true);
         // Avaiable seat count
         const avaiableSeat = parseInt(document.getElementById('avaiable_seat').innerText);
         document.getElementById('avaiable_seat').innerText = avaiableSeat - 1 ;
@@ -57,6 +58,7 @@ for(const seat of allSeat){
             for(const selected of allSelectedSeat){
                 selected.classList.remove('bg-brand-color');
                 selected.classList.remove('text-white');
+                selected.removeAttribute('disabled');
             }
             totalSelectedSeat = 0;
             document.getElementById('avaiable_seat').innerText = 40;
