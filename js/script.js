@@ -41,6 +41,14 @@ for(const seat of allSeat){
         // Grand total count
         const totalPrice = parseInt(document.getElementById('total_price').innerText);
         grandTotalPriceCount(totalPrice, 0);
+        const phoneInput = document.getElementById('phone').value;
+        const nextBtn = document.getElementById('next_btn');
+        if(totalSelectedSeat > 0 && phoneInput.length === 11){
+        nextBtn.removeAttribute('disabled');
+        }
+        
+        
+
     })
 }
 // Coupon code validation 
@@ -74,6 +82,18 @@ document.getElementById('apply_btn').addEventListener('click', function(){
         alert("Invalid Coupon Code")
     )
 })
+
+// Input form validation
+
+const nextBtn = document.getElementById('next_btn');
+document.getElementById('phone').addEventListener('keyup', function(event){
+if(totalSelectedSeat > 0 && event.target.value.length === 11){
+    nextBtn.removeAttribute('disabled');
+   }
+   
+})
+
+
 
 function totalPriceCount(value){
     let totalPrice = parseInt(document.getElementById('total_price').innerText);
