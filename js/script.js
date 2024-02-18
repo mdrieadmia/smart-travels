@@ -47,7 +47,7 @@ for(const seat of allSeat){
         if(totalSelectedSeat > 0 && phoneInput.length === 11){
         nextBtn.removeAttribute('disabled');
         }
-        // Clear form after confirm
+        // Clear data after confirm purchase
         document.getElementById('continue').addEventListener('click',function(){
             ticketContainer.childNodes[0].remove();
             document.getElementById('total_price').innerText = 0
@@ -62,7 +62,6 @@ for(const seat of allSeat){
             document.getElementById('avaiable_seat').innerText = 40;
         })
     })
-    
 }
 // Coupon code validation 
 document.getElementById('apply_btn').addEventListener('click', function(){
@@ -95,18 +94,14 @@ document.getElementById('apply_btn').addEventListener('click', function(){
         alert("Invalid Coupon Code")
     )
 })
-
 // Input form validation
-
 const nextBtn = document.getElementById('next_btn');
 document.getElementById('phone').addEventListener('keyup', function(event){
 if(totalSelectedSeat > 0 && event.target.value.length === 11){
     nextBtn.removeAttribute('disabled');
    }
-   
 })
-
-// Show Modal
+// Clear form data after confirm purchase
 document.getElementById('continue').addEventListener('click',function(){
     const name = document.getElementById('name');
     const phone = document.getElementById('phone');
@@ -116,12 +111,12 @@ document.getElementById('continue').addEventListener('click',function(){
     email.value = '';
     nextBtn.setAttribute('disabled', true)
 })
-
+// Total price count and set by id
 function totalPriceCount(value){
     let totalPrice = parseInt(document.getElementById('total_price').innerText);
     document.getElementById('total_price').innerText = totalPrice + value;
 }
-
+// Grand total price count and set by
 function grandTotalPriceCount(total, discount){
     let totalPrice = parseInt(document.getElementById('grand_total').innerText);
     document.getElementById('grand_total').innerText = total - discount;
